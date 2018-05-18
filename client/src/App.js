@@ -3,7 +3,7 @@ import { Route, withRouter } from 'react-router-dom';
 
 import Signin from './auth/Signin';
 import Jokes from './jokes/Jokes';
-// import Redirect from './redirect/Redirect';
+import Redirect from './redirect/Redirect';
 
 import logo from './logo.svg';
 import './App.css';
@@ -16,10 +16,10 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
           {localStorage.getItem('token') && (
-            <button className="button__signout" onClick={this.signout}>Sign out</button>
+            <button className="button button__signout" onClick={this.signout}>Sign out</button>
           )}
         </header>
-        {/* <Route exact path='/' component={Redirect} /> */}
+        <Route exact path='/' component={Redirect} />
         <Route path='/signin' component={Signin} />
         <Route path='/jokes' component={Jokes} />
       </div>

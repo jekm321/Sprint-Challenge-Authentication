@@ -8,6 +8,16 @@ class Signin extends React.Component {
     };
 
     render() {
+        if (localStorage.getItem('token')) {
+            return (
+                <div>
+                    <div>
+                        Already Logged In
+                    </div>
+                    <button className="button button_redirect" onClick={this.redirect} >Go To Jokes</button>
+                </div>
+            )
+        }
         return (
             <form
                 className="form"
@@ -36,10 +46,14 @@ class Signin extends React.Component {
                     />
                 </div>
                 <div>
-                    <button className="button__singin" type="submit" >Sign In</button>
+                    <button className="button button__singin" type="submit" >Sign In</button>
                 </div>
             </form>
         )
+    }
+
+    redirect = () => {
+        this.props.history.push('/jokes');
     }
 
     handleInputChange = ({ target }) => {
