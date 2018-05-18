@@ -16,7 +16,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
           {localStorage.getItem('token') && (
-            <button onClick={this.signout}>Sign out</button>
+            <button className="button__signout" onClick={this.signout}>Sign out</button>
           )}
         </header>
         {/* <Route exact path='/' component={Redirect} /> */}

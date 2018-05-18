@@ -9,16 +9,16 @@ class Jokes extends React.Component {
     render() {
         return (
             <div>
-                <ul>
+                <ul className="container" >
                     {this.state.jokes.map(joke => (
-                        <li key={joke.id}>
-                            <div>
+                        <li className="container__jokes" key={joke.id}>
+                            <div className="jokes__type" >
                                 type: {joke.type}
                             </div>
-                            <div>
+                            <div className="jokes__setup" >
                                 setup: {joke.setup}
                             </div>
-                            <div>
+                            <div className="jokes__punchline" >
                                 punchline: {joke.punchline}
                             </div>
                             <br />

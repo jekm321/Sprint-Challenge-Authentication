@@ -9,10 +9,14 @@ class Signin extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.submitChange}>
-                <div>
+            <form
+                className="form"
+                onSubmit={this.submitChange}
+            >
+                <div className="form__input" >
                     <label htmlFor="username" />
                     <input
+                        className="input"
                         name="username"
                         placeholder="Enter Username Here"
                         value={this.state.username}
@@ -20,9 +24,10 @@ class Signin extends React.Component {
                         type="text"
                     />
                 </div>
-                <div>
+                <div className="form__input" >
                     <label htmlFor="password" />
                     <input
+                        className="input"
                         name="password"
                         placeholder="Enter Password Here"
                         value={this.state.password}
@@ -31,7 +36,7 @@ class Signin extends React.Component {
                     />
                 </div>
                 <div>
-                    <button type="submit" >Sign In</button>
+                    <button className="button__singin" type="submit" >Sign In</button>
                 </div>
             </form>
         )
