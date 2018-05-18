@@ -33,7 +33,7 @@ UserSchema.pre('save', function(next) {
     this.password = hash;
 
     return next();
-  })
+  });
 });
 
 UserSchema.methods.checkPassword = function(plainTextPW, callBack) {

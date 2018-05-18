@@ -5,7 +5,7 @@ const cors = require('cors');
 const routes = require('./api/routes/routes');
 
 const server = express();
-const whitelist = ['http://localhost:3000']
+const whitelist = ['http://localhost:3000', 'http://localhost:5000']
 const corsOptions = {
   // If you're moving onto the stretch problem you'll need to set this obj with the appropriate fields
   // ensure that your client's URL/Port can achieve a Handshake
