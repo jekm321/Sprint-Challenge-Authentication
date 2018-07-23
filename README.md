@@ -78,3 +78,13 @@
 * In order to play around with a client server app, you'll need to set up your `cors` inside of `server.js` properly.
 * Using React and React Router, create a `Sign Up`, `Sign In` and `Jokes` page.
 * Once you have the functionality down, you'll be able to style it up a bit and play around with the jokes etc.
+
+* in order to work on postman, comment out the server.use(cors(corsOptions)) in the server.js file in this directory
+
+* To test the react app, make a username through postman --> post to localhost:5000/api/users in JSON format
+{
+  "username": "nameHere",
+  "password": "passHere"
+}
+* in order to use the react app, enable the server.use(cors(corsOptions)) in the server.js file in this directory
+* authorization token will be made and can be immediately used in the react app login
